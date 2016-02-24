@@ -1,1 +1,1 @@
-# LightningExamples
+# Examples of Salesforce Lightning Components
