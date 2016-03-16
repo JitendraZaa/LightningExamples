@@ -1,0 +1,43 @@
+<aura:component >
+	<aura:attribute name="title" type="String" required="true"/>
+    <aura:attribute name="closable" type="Boolean" default="true"/>
+    
+    <aura:attribute name="closeLabel" type="String" default="Close"/> 
+    <aura:attribute name="confirmLabel" type="String" default="OK"/>
+    
+    <aura:attribute name="onclose" type="Aura.Action" default="{!c.defaultCloseAction}"/> 
+    <aura:attribute name="onconfirm" type="Aura.Action" default="{!c.defaultCloseAction}"/>
+    
+    <div class="slds">
+        <div>
+            <!-- instead of using display property of css, use aria-hidden from HTML5 -->
+            <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
+                
+                <div class="slds-modal__container">
+                        <div class="slds-modal__header">
+                            <h2 class="slds-text-heading--medium">{!v.title}</h2>
+                            <aura:if isTrue="{!v.closable}">
+                                <button class="slds-button slds-modal__close" onclick="{!v.onclose}">
+                                    <c:svgIcon svgPath="/resource/SLD_0_12_2/assets/icons/action-sprite/svg/symbols.svg#close" 
+                                               category="standard" 
+                                               size="small" 
+                                               name="close" />
+                                    
+                                    <span class="slds-assistive-text">{!v.closeLabel}</span>
+                                </button>
+                            </aura:if>
+                        </div> 
+                        <div class="slds-modal__content">
+                            <div>
+                                {!v.body}
+                            </div>
+                        </div>
+                        <div class="slds-modal__footer"> 
+                            <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!v.onconfirm}">{!v.confirmLabel}</button>
+                        </div>
+                    </div> 
+            </div>
+            <div class="slds-modal-backdrop slds-modal-backdrop--open"></div>
+        </div>
+    </div>
+</aura:component>
