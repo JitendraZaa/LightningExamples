@@ -1,0 +1,44 @@
+<aura:component controller="ContactListController_Server" implements="force:appHostable,flexipage:availableForAllPageTypes" > 
+     <aura:attribute name="txtContact" type="String" description="Contact Name to be searched" /> 
+	 <aura:attribute name="rows" type="object[]" description="Values returned from Apex" /> 
+    
+    <div class="slds">
+    	<div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-size--1-of-1">     
+                <div class="lds-form--horizontal">
+                    <label class="slds-form-element__label" for="text-input-01">Contact Name</label>
+                    <div class="slds-form-element__control"> 
+                      <ui:inputText aura:id="txtContactName" value="{!v.txtContact}" class="slds-input" placeholder="Text to search" />
+                    </div>
+                 </div> 
+            </div>
+            <div class="slds-col slds-size--1-of-1"> 
+                 <button class="slds-button slds-theme--alt-inverse slds-p-left--medium slds-p-right--medium" onclick="{!c.search}">Search</button>
+            </div>
+        </div>
+        
+        <p>
+        	Search Results :
+        </p>
+        <table class="slds-table slds-table--bordered">
+            <thead>
+              <tr class="slds-text-heading--label">
+                <th class="slds-cell-shrink"> 
+                    Contact Name
+                </th>    
+              </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.rows}" var="r">
+                    <tr class="slds-hint-parent">
+                        <td class="slds-cell-shrink" data-label="Select Row">
+                           {!r.Name}
+                        </td> 
+                      </tr> 
+                </aura:iteration> 
+            </tbody>
+        </table>
+    
+    </div> 
+    
+</aura:component>

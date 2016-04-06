@@ -1,0 +1,10 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="ZaaDF14:ContactList" label="Example 1"> 
+        <!--
+            <ZaaDF14:ContactList>
+                <aura:set attribute="txtContact">This sets the attribute on the np:myComponent component.</aura:set> 
+            </ZaaDF14:ContactList>
+        -->
+	</aura:example>
+</aura:documentation>
