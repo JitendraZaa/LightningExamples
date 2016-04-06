@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Search Wikipedia</aura:description>
+	<aura:example name="HowToUse" ref="exampleComponentName" label="How to use">
+		Enter any text and hit enter to get result
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,4 @@
+<design:component>
+	<design:attribute name="resultLimit" label="Result Limit" 
+                      description="Total number of results to display" />
+</design:component>

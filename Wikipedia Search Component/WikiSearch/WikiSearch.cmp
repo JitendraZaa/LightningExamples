@@ -1,0 +1,46 @@
+<aura:component controller="WikiHttpRequest" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes">
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system.css"/>
+    <aura:attribute name="txtWikiText" type="String"/>
+    <aura:attribute name="resultLimit" type="Integer" default="4"/>
+ 
+  <div class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <div class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+          <c:svg class="slds-icon  slds-icon--small slds-icon-standard-account" 
+                 xlinkHref="/resource/SLDS090/assets/icons/custom-sprite/svg/symbols.svg#custom68" />
+           
+      </div>
+      <div class="slds-media__body">
+        <h2 class="slds-text-heading--small slds-truncate">Wikipedia Search</h2>
+      </div>
+    </div>
+  
+  </div>
+  <div class="slds-card__body slds-box slds-theme--default">
+      <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-size--10-of-12">
+          	<ui:inputText value="{!v.txtWikiText}" placeholder="Search Text" class="slds-input" 
+                          keyup="{!c.searchWiki}"/>    
+          </div>
+          <div class="slds-col slds-size--2-of-12">
+          	<button class="slds-m-left--small slds-button slds-button--icon-border-filled slds-button--icon-small">
+                <c:svg class="slds-button__icon" 
+                                 xlinkHref="/resource/SLDS090/assets/icons/utility-sprite/svg/symbols.svg#search" />
+              <span class="slds-assistive-text">Settings</span>
+            </button>
+          </div>
+          
+          <div class="slds-col slds-size--10-of-12 slds-p-top--large"> 
+              <ul id="resultPlaceHolder" class="slds-list--vertical slds-has-cards slds-has-inline-block-links--space">
+                  <!-- This is placeholder to render Wiki Search results -->
+              </ul>
+          </div>
+          
+          <div class="slds-col slds-size--2-of-12"></div>
+        </div>  
+      </div> 
+    </div>
+    
+</aura:component>
