@@ -1,0 +1,31 @@
+<aura:component >
+	
+    <aura:attribute name="rows" type="Object[]" description="rows of table" />
+    <aura:attribute name="cols" type="Object[]" description="Columns of table" />
+    
+    <div class="slds">
+    	<table class="slds-table slds-table--bordered">
+    	<thead>
+            <tr class="slds-text-heading--label">            	
+                 <aura:iteration items="{!v.cols}" var="col">
+                    <th class="{!col.class}"> {!col.label} </th>
+                </aura:iteration>                
+            </tr>        	 
+        </thead>
+            
+        <tbody>
+            <aura:iteration items="{!v.rows}" var="row">
+                <tr class="slds-hint-parent"> 
+                	<aura:iteration items="{!row.dataColumns}" var="colData">
+                        <td class="{!colData.class}">
+                        	{!colData.data}
+                        </td>
+                    </aura:iteration>
+                </tr>
+             </aura:iteration>              
+        </tbody>    
+    	</table>
+    </div>
+    
+    
+</aura:component>

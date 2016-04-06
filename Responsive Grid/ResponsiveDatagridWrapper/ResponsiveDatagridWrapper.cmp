@@ -1,0 +1,23 @@
+<aura:component controller="ContactController">
+    
+    <aura:handler name="init"  value="{!this}" action="{!c.doInit}" />
+	<aura:attribute name="rows" type="Object[]" description="data rows of table" />
+    
+	<c:DataGrid aura:id="grid">
+        <c:DataColumn label="Name" type="text" />
+        <c:DataColumn label="DOB" type="date" />
+        <c:DataColumn label="Email" type="Text" class="hidden" />
+        <c:DataColumn label="Mobile" type="Number" class="hidden" />
+        
+        <aura:iteration items="{!v.rows}" var="r">
+            <c:DataRow data="{!r.data}" delimiter="{!r.delimiter}" uk="{!r.uk}" />
+        </aura:iteration>
+        
+        <!--
+        <c:DataRow data="Rudra|Jan-11|abc@xyz.com|1234569878" delimiter="|" uk="1" />
+        <c:DataRow data="Shivanya|Feb-17|yuy@pqr.com|1234569878" delimiter="|" uk="2" />
+        <c:DataRow data="Minal;Dec-31;ghy@sds.com;1234569878" delimiter=";" uk="3"/>    
+        -->
+
+    </c:DataGrid> 
+</aura:component>

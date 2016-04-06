@@ -1,0 +1,12 @@
+<aura:component >
+    <ltng:require styles="/resource/SLDS_1_0/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    
+    <aura:attribute name="cols" type="Object[]" description="attribute to hold cols" />  
+    <aura:attribute name="rows" type="object[]" description="attribute to hold rows" />
+    
+    <aura:handler name="init"  value="{!this}" action="{!c.doInit}" />
+    <aura:method name="refresh" action="{!c.doInit}" access="public" description="This method can be accessed outside of this component" />
+    
+    <c:DataGridTable rows="{!v.rows}" cols="{!v.cols}" />
+    
+</aura:component>

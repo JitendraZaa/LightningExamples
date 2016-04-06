@@ -1,0 +1,5 @@
+<aura:component >
+	<aura:attribute name="data" type="String" required="true" default="text" description="values in row" />   
+    <aura:attribute name="delimiter" type="String" required="false" default="|" description="delimiter to seperate values in row" />   
+    <aura:attribute name="uk" type="String" required="true"  description="unique key of row" />    
+</aura:component>

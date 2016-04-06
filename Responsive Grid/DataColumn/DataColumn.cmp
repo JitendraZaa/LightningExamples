@@ -1,0 +1,6 @@
+<aura:component >	
+    <aura:attribute name="type" type="String" required="false" default="text" description="Type of the column to display in Datagrid" />    
+    <aura:attribute name="label" type="String" required="true" default="Label" description="Label of the column to display in Datagrid" />    
+    <aura:attribute name="class" type="String" required="false"  description="CSS class of the column to display in Datagrid" />    
+    <aura:attribute name="hidden" type="Boolean" required="false" default="false" description="Hide this column in mobile mode or not" />      
+</aura:component>
