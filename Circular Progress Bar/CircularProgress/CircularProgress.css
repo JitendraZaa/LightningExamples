@@ -1,0 +1,203 @@
+.THIS .clearFloats:before, .THIS .clearFloats:after 
+{
+    content: " "; 
+    display: table !important;
+}
+
+.THIS  .clearFloats:after {clear: both;}
+.THIS .clearFloats {*zoom: 1; }
+
+.THIS .container .slice , .THIS .container.p50plus .slice
+{
+	clip: rect(auto, auto, auto, auto);
+}
+
+.THIS .pie, .THIS .container .bar , .THIS .fill, .THIS .container.p50plus .fill{
+	 position: absolute;
+	  border: 0.08em solid #307bbb;
+	  width: 0.84em;
+	  height: 0.84em;
+	  clip: rect(0em, 0.5em, 1em, 0em);
+	  -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%;
+	  -ms-border-radius: 50%;
+	  -o-border-radius: 50%;
+	  border-radius: 50%;
+	  -webkit-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -ms-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+}
+
+.THIS .pie-fill, .THIS .container.p50plus .bar:after, .THIS .container.p50plus .fill{
+	 -webkit-transform: rotate(180deg);
+	  -moz-transform: rotate(180deg);
+	  -ms-transform: rotate(180deg);
+	  -o-transform: rotate(180deg);
+	  transform: rotate(180deg);
+}
+
+.THIS .container {
+	  position: relative;
+	  font-size: 120px;
+	  width: 1em;
+	  height: 1em;
+	  -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%;
+	  -ms-border-radius: 50%;
+	  -o-border-radius: 50%;
+	  border-radius: 50%;
+	  float: left;
+	  margin: 0 0.1em 0.1em 0;
+	  background-color: #cccccc;
+	}
+
+.THIS .container *, .THIS .container *:before, .THIS .container *:after {
+	  -webkit-box-sizing: content-box;
+	  -moz-box-sizing: content-box;
+	  box-sizing: content-box;
+	}
+
+.THIS .container.center {
+	  float: none;
+	  margin: 0 auto;
+	}
+.THIS .container.big {
+	  font-size: 240px;
+	}
+.THIS .container.small {
+	  font-size: 80px;
+	}
+.THIS .container.medium {
+	  font-size: 160px;
+	}
+
+.THIS .container > span {
+	  position: absolute;
+	  width: 100%;
+	  z-index: 1;
+	  left: 0;
+	  top: 0;
+	  width: 5em;
+	  line-height: 5em;
+	  font-size: 0.2em;
+	  color: #cccccc;
+	  display: block;
+	  text-align: center;
+	  white-space: nowrap;
+	  -webkit-transition-property: all;
+	  -moz-transition-property: all;
+	  -o-transition-property: all;
+	  transition-property: all;
+	  -webkit-transition-duration: 0.2s;
+	  -moz-transition-duration: 0.2s;
+	  -o-transition-duration: 0.2s;
+	  transition-duration: 0.2s;
+	  -webkit-transition-timing-function: ease-out;
+	  -moz-transition-timing-function: ease-out;
+	  -o-transition-timing-function: ease-out;
+	  transition-timing-function: ease-out;
+	}
+
+.THIS .container:after {
+	  position: absolute;
+	  top: 0.08em;
+	  left: 0.08em;
+	  display: block;
+	  content: " ";
+	  -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%;
+	  -ms-border-radius: 50%;
+	  -o-border-radius: 50%;
+	  border-radius: 50%;
+	  background-color: whitesmoke;
+	  width: 0.84em;
+	  height: 0.84em;
+	  -webkit-transition-property: all;
+	  -moz-transition-property: all;
+	  -o-transition-property: all;
+	  transition-property: all;
+	  -webkit-transition-duration: 0.2s;
+	  -moz-transition-duration: 0.2s;
+	  -o-transition-duration: 0.2s;
+	  transition-duration: 0.2s;
+	  -webkit-transition-timing-function: ease-in;
+	  -moz-transition-timing-function: ease-in;
+	  -o-transition-timing-function: ease-in;
+	  transition-timing-function: ease-in;
+	}
+
+.THIS .container .slice {
+	  position: absolute;
+	  width: 1em;
+	  height: 1em;
+	  clip: rect(0em, 1em, 1em, 0.5em);
+	}
+
+.THIS .container:hover {
+	  cursor: default;
+	}
+
+.THIS .container:hover > span {
+	  width: 3.33em;
+	  line-height: 3.33em;
+	  font-size: 0.3em; 
+	}
+
+.THIS .container:hover:after {
+	  top: 0.04em;
+	  left: 0.04em;
+	  width: 0.92em;
+	  height: 0.92em;
+	}
+
+
+
+.THIS .container.blue .bar, .THIS .container.blue .fill {
+  border-color: #307bbb !important;
+}
+
+.THIS .container.blue:hover > span {
+  color: #307bbb;
+}
+
+.THIS .container.green .bar, .THIS .container.green .fill {
+  border-color: #4db53c !important;
+}
+
+.THIS .container.green:hover > span {
+  color: #4db53c;
+}
+ 
+.THIS .container.orange .bar, .THIS .container.orange .fill {
+  border-color: #dd9d22 !important;
+}
+
+.THIS .container.orange:hover > span {
+  color: #dd9d22;
+}
+.THIS .container.red .bar, .THIS .container.red .fill {
+  border-color: #ff0000 !important;
+}
+
+.THIS .container.red:hover > span {
+  color: #ff0000;
+}
+
+.THIS.legend{ 
+    color: rgb(22, 50, 92);
+    font-weight: bold;
+}
+.THIS.legend.big{
+    font-size: 1.25rem;
+    color: rgb(22, 50, 92);
+}
+.THIS.legend.medium{
+    font-size: 1.0rem;
+    color: rgb(22, 50, 92);
+}
+.THIS.legend.small{
+    font-size: 0.7rem; 
+    color: rgb(22, 50, 92);
+}

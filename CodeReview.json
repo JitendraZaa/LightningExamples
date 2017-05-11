@@ -1,0 +1,103 @@
+[
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Calling Apex method from client controller\\ContactList\\ContactListController.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Calling Apex method from client controller\\ContactList\\ContactListHelper.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\modalDialogDemo\\modalDialog\\modalDialogController.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\modalDialogDemo\\modalDialogDemoController.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\RendererDemo\\RendererDemoRenderer.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Responsive Grid\\DataGrid\\DataGridController.js",
+        "result": [
+            {
+                "ruleId": "no-console",
+                "severity": 2,
+                "message": "Unexpected console statement.",
+                "line": 4,
+                "column": 9,
+                "nodeType": "MemberExpression",
+                "source": "        console.log('Executed');"
+            }
+        ]
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Responsive Grid\\DataGrid\\DataGridHelper.js",
+        "result": [
+            {
+                "ruleId": "default-case",
+                "severity": 2,
+                "message": "Expected a default case.",
+                "line": 21,
+                "column": 13,
+                "nodeType": "SwitchStatement",
+                "source": "            switch(currentTag.getDef().getDescriptor().getName()){"
+            },
+            {
+                "ruleId": "no-console",
+                "severity": 2,
+                "message": "Unexpected console statement.",
+                "line": 48,
+                "column": 21,
+                "nodeType": "MemberExpression",
+                "source": "                    console.log('Detected Iteration tag');"
+            }
+        ]
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Responsive Grid\\ResponsiveDatagridWrapper\\ResponsiveDatagridWrapperController.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Responsive Grid\\ResponsiveDatagridWrapper\\ResponsiveDatagridWrapperHelper.js",
+        "result": [
+            {
+                "ruleId": "no-alert",
+                "severity": 2,
+                "message": "Unexpected alert.",
+                "line": 34,
+                "column": 21,
+                "nodeType": "CallExpression",
+                "source": "                    alert('Error in Component - '+errors[0].message);"
+            }
+        ]
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\svgIcon\\svgIconHelper.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\svgIcon\\svgIconRenderer.js",
+        "result": []
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Wikipedia Search Component\\WikiSearch\\WikiSearchController.js",
+        "result": [
+            {
+                "ruleId": "eqeqeq",
+                "severity": 2,
+                "message": "Expected '===' and instead saw '=='.",
+                "line": 3,
+                "column": 29,
+                "nodeType": "BinaryExpression",
+                "source": "        if(event.ea.keyCode == 13){ "
+            }
+        ]
+    },
+    {
+        "file": "C:\\G2\\My POC\\LightningExamples\\Wikipedia Search Component\\WikiSearch\\WikiSearchHelper.js",
+        "result": []
+    }
+]

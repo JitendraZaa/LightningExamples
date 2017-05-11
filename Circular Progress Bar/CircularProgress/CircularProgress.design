@@ -1,0 +1,24 @@
+<design:component>    
+    <design:attribute name="size" label="Size" datasource="small, medium, big" description="Size of the of the component" />
+    
+    <design:attribute name="totalProgress" label="Total"   
+                      description="Either API Name of field Or numeric value showing total value to be used for computation" />
+    <design:attribute name="actualProgress" label="Actual"  
+                      description="Either API Name of field Or numeric value showing actual value to be used for computation" />
+     
+    <design:attribute name="Legend" label="Legend" description="Legend to be displayed." />
+    
+    <design:attribute name="resultFormat" label="Result Format" datasource="Percentage , Actual Number, Mix"  
+                      description="Format of result to be displayed inside Circular Progress Bar.
+                                                                   Allowed values are Percentage, Actual Number, Mix." />
+     
+    <design:attribute name="themeBeforeThreshold" label="Theme Before Threshold" datasource="blue, green , orange, red" 
+                      description="Theme of the component before threshold" />
+    
+    <design:attribute name="themeAfterThreshold" label="Theme After Threshold" datasource="blue, green , orange, red" 
+                      description="Theme of the component After threshold" />
+    
+    <design:attribute name="threshold" label="Threshold after which color needs to be chaged"
+                      description="This field can be used to support multiple theme after threshold value" /> 
+     
+</design:component>

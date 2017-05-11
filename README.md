@@ -12,3 +12,6 @@
 
 ![Demo](https://github.com/JitendraZaa/LightningExamples/blob/master/Demo%20images/Disable%20Pull-to-Refresh%20in%20Salesforce1%20for%20Lightning%20Components.gif "Disable Pull-to-Refresh in Salesforce1 for Lightning Components")
 
+### Circular Progress bar Lightning Components example
+[Blog post explaining component](http://www.jitendrazaa.com/blog/salesforce/circular-progress-bar-with-conditional-theme-salesforce-lightning-component/)
+![Demo](http://www.jitendrazaa.com/blog/wp-content/uploads/2016/12/Circuar-Progress-Bar-v2-1.gif "Circular Progress bar Lightning Components")

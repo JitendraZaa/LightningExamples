@@ -1,0 +1,25 @@
+<aura:component >
+    <div class="slds-grid slds-p-top--xx-large">
+        <div class="slds-col">
+            <c:CircularProgress themeAfterThreshold="blue" themeBeforeThreshold="red" size="medium" 
+                                totalProgress="51" actualProgress="8"
+                        Legend="Result format Percentage" resultFormat="Percentage" threshold="50"/>  
+            
+        </div>
+        <div class="slds-col">
+            <c:CircularProgress themeAfterThreshold="orange"  themeBeforeThreshold="red" size="medium" 
+                                totalProgress="100" actualProgress="35"   
+                        Legend="Result format Actual Number" resultFormat="Actual Number" threshold="25" />  
+        </div>
+        <div class="slds-col">
+            <c:CircularProgress themeAfterThreshold="green"  themeBeforeThreshold="red" size="medium" 
+                                totalProgress="90" actualProgress="24" 
+                        Legend="Result format Mix" resultFormat="Mix" threshold="10" />  
+        </div>
+        <div class="slds-col">
+            <c:CircularProgress themeAfterThreshold="green"  themeBeforeThreshold="red" size="medium" 
+                                totalProgress="90" actualProgress="24" 
+                        Legend="Threshold Second theme in Action" resultFormat="Mix" threshold="30" />  
+        </div>
+    </div>   
+</aura:component>
