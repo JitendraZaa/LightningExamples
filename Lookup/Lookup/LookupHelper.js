@@ -15,7 +15,7 @@
         var searchText = target.value; 
         var last_SearchText = component.get("v.last_SearchText");
         //Escape button pressed 
-        if (event.keyCode == 27) { 
+        if (event.keyCode == 27 || !searchText.trim()) { 
             helper.clearSelection(component, event, helper);
         }else if(searchText.trim() != last_SearchText  && /\s+$/.test(searchText) ){ 
             //Save server call, if last text not changed
