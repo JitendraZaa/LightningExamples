@@ -1,0 +1,43 @@
+.THIS{
+    width:99%;
+}
+.THIS .fullWidth{
+    width:100%;
+}
+.THIS .slds-listbox__item:hover {
+    background: #d8edff;
+    text-shadow: none;
+    color: #16325c;
+}
+
+.THIS .optionParent1{
+    line-height: 1.5;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8125rem;
+}
+
+.THIS .optionIcon {
+   margin-top: 0.50rem;
+}
+
+.THIS .optionTitle{
+        max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    margin-bottom: 0.125rem;
+}
+
+.THIS .optionline{
+        display: block;
+    margin-top: -0.25rem;
+    color: #54698d;
+}
+.THIS .singleRow{
+    padding-top:5px;
+}
+
+.THIS .hide{
+    display:none;
+}
