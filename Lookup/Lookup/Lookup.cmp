@@ -9,7 +9,8 @@
     <aura:attribute name="field_API_val" type="String" access="public" description="API Name of field, to be returned from component"/>
     <aura:attribute name="field_API_search" type="String" access="public" description="API Name of field to be searched"/>
     <aura:attribute name="limit" type="Integer" access="public" default="5" description="Total number of record to be returned"/>
-     
+    <aura:attribute name="placeholder" type="String" access="public" default="Space character is used to search" />
+    
     <aura:attribute name="last_SearchText" type="String" access="private" />
     <aura:attribute name="last_ServerResult" type="object[]" access="private" /> 
 
@@ -25,7 +26,7 @@
                                          <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" 
                                                 aria-activedescendant="listbox-option-unique-id-01" aria-autocomplete="list" 
                                                 aria-controls="listbox-unique-id" autocomplete="off" role="combobox" 
-                                                placeholder="Search Salesforce after space character" 
+                                                placeholder="{!v.placeholder}" 
                                                 onkeyup="{!c.serverCall}" />
                                         <aura:set attribute="else"> 
                                                 <span class="slds-pill slds-pill_link fullWidth"> 

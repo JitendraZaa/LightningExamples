@@ -1,22 +1,103 @@
 <aura:component >
-	 <aura:attribute Name="selItem" type="object" access="public" /> 
-     <div > 
-            <c:Lookup objectName="lead"
-                    field_API_text="Name"
-                    field_API_val="Id"
-                    limit="4"
-                    field_API_search="Name"
-                    lookupIcon="standard:lead"
-                    aura:id="lookup1"
-                    selItem="{!v.selItem}" />  
-             
-            <aura:if isTrue="{! not(empty(v.selItem)) }"> 
-                <br />
-                This is Parent Lightning component <br />
-                Item Selected : <br />
-                ID - {#v.selItem.val} <br /> 
-                Text - {#v.selItem.text}<br />
-                Object - {#v.selItem.objName}
-            </aura:if> 
+    <aura:attribute Name="selItem" type="object"  access="public" /> 
+    <aura:attribute Name="selItem1" type="object"  access="public" />
+    <aura:attribute Name="selItem2" type="object"  access="public" />
+    <aura:attribute Name="selItem3" type="object"  access="public" />
+    <div class="slds">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-1 
+                        slds-small-size_1-of-1 
+                        slds-medium-size_1-of-2 
+                        slds-large-size_1-of-4 ">
+                <c:Lookup objectName="Opportunity"
+                          field_API_text="Name"
+                          field_API_val="Id"
+                          limit="4"
+                          field_API_search="Name"
+                          lookupIcon="standard:opportunity" 
+                          selItem="{!v.selItem}" 
+                          placeholder="Enter space after text to search Opportunities"
+                          />  
+                
+                <aura:if isTrue="{! not(empty(v.selItem)) }"> 
+                    <br />
+                    This is Parent Lightning component <br />
+                    Item Selected : <br />
+                    ID - {#v.selItem.val} <br /> 
+                    Text - {#v.selItem.text}<br />
+                    Object - {#v.selItem.objName}
+                </aura:if> 
+            </div>
+            <div class="slds-size_1-of-1 
+                        slds-small-size_1-of-1 
+                        slds-medium-size_1-of-2 
+                        slds-large-size_1-of-4 ">
+                <c:Lookup objectName="Lead"
+                          field_API_text="Name"
+                          field_API_val="Id"
+                          limit="4"
+                          field_API_search="Name"
+                          lookupIcon="standard:lead" 
+                          selItem="{!v.selItem1}"
+                          placeholder="Enter space after text to search Leads
+                                       "/>  
+                
+                <aura:if isTrue="{! not(empty(v.selItem1)) }"> 
+                    <br />
+                    This is Parent Lightning component <br />
+                    Item Selected : <br />
+                    ID - {#v.selItem1.val} <br /> 
+                    Text - {#v.selItem1.text}<br />
+                    Object - {#v.selItem1.objName}
+                </aura:if> 
+            </div>
+            <div class="slds-size_1-of-1 
+                        slds-small-size_1-of-1 
+                        slds-medium-size_1-of-2 
+                        slds-large-size_1-of-4 ">
+                <c:Lookup objectName="Account"
+                          field_API_text="Name"
+                          field_API_val="Id"
+                          limit="4"
+                          field_API_search="Name"
+                          lookupIcon="standard:account" 
+                          selItem="{!v.selItem2}" 
+                          placeholder="Enter space after text to search Accounts"
+                          />  
+                
+                <aura:if isTrue="{! not(empty(v.selItem2)) }"> 
+                    <br />
+                    This is Parent Lightning component <br />
+                    Item Selected : <br />
+                    ID - {#v.selItem2.val} <br /> 
+                    Text - {#v.selItem2.text}<br />
+                    Object - {#v.selItem2.objName}
+                </aura:if> 
+            </div>
+            <div class="slds-size_1-of-1 
+                        slds-small-size_1-of-1 
+                        slds-medium-size_1-of-2 
+                        slds-large-size_1-of-4 ">
+                <c:Lookup objectName="Contact"
+                          field_API_text="Name"
+                          field_API_val="Id"
+                          limit="4" 
+                          field_API_search="Name"
+                          lookupIcon="standard:contact" 
+                          selItem="{!v.selItem3}"
+                          placeholder="Enter space after text to search Contacts"
+                          />  
+                
+                <aura:if isTrue="{! not(empty(v.selItem3)) }"> 
+                    <br />
+                    This is Parent Lightning component <br />
+                    Item Selected : <br />
+                    ID - {#v.selItem3.val} <br /> 
+                    Text - {#v.selItem3.text}<br />
+                    Object - {#v.selItem3.objName}
+                </aura:if> 
+            </div>
         </div>
+    </div>
+    
 </aura:component>
