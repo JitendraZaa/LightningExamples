@@ -5,9 +5,11 @@
         if(SelIndex){
             var serverResult = component.get("v.server_result");
             var selItem = serverResult[SelIndex];
-            component.set("v.last_ServerResult",serverResult);
-            component.set("v.server_result",null);
-            component.set("v.selItem",selItem);
+            if(selItem.val){
+               component.set("v.selItem",selItem);
+               component.set("v.last_ServerResult",serverResult);
+            } 
+            component.set("v.server_result",null); 
         } 
 	}, 
     serverCall : function(component, event, helper) {  
@@ -54,8 +56,14 @@
     handleResponse : function (res,component,helper){
         if (res.getState() === 'SUCCESS') {
             var retObj = JSON.parse(res.getReturnValue());
-            component.set("v.server_result",retObj); 
-            component.set("v.last_ServerResult",retObj); 
+            if(retObj.length <= 0){
+                var noResult = JSON.parse('[{"text":"No Results Found"}]');
+                component.set("v.server_result",noResult); 
+            	component.set("v.last_ServerResult",noResult);
+            }else{
+                component.set("v.server_result",retObj); 
+            	component.set("v.last_ServerResult",retObj);
+            }  
         }else if (res.getState() === 'ERROR'){
             var errors = res.getError();
             if (errors) {
