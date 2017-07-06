@@ -1,11 +1,16 @@
 # Examples of Salesforce Lightning Components
 
+### Salesforce Lightning Lookup component
+
+[Check this blog post for complete information](http://www.jitendrazaa.com/blog/salesforce/lookup-component-in-salesforce-lightning/)
+
+![Salesforce Lightning Lookup Component](http://www.jitendrazaa.com/blog/wp-content/uploads/2017/07/Lookup-Component.gif)
+
 ### Lightning Component for Wikipedia search
 
 [Blog post explaining component](http://www.jitendrazaa.com/blog/salesforce/lightning-component-for-wikipedia-search/) & [Youtube Video](https://www.youtube.com/watch?v=MXdVHL5cw-k)
 
 ![Demo](http://www.jitendrazaa.com/blog/wp-content/uploads/2016/01/Salesforce-Lightning-Component-for-Wikipedia-Search-624x467.png "Lightning Component for Wikipedia search")
-
 
 
 
